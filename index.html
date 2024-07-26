@@ -1,97 +1,191 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Front-End Brasil - Portando discussões feitas em grupos (Facebook, Google Groups, Slack, Disqus) para issues.</title>
-        <meta name="description" content="Website da Organização Front-End Brasil">
-        <meta name="keywords" content="front-end, frontend, comunidade, html, css, javascript, brasil">
-        <meta name="viewport" content="width=device-width">
-        <link type="text/plain" rel="author" href="humans.txt" />
-        <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="assets/css/style.css">
-				<script src="assets/Ecmascript/scrolling.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto de Marketing Digital</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <body>
-        <header class="header">
-            <div class="centered-parent">
-                <div class="centered-child">
-                    <img src="https://avatars0.githubusercontent.com/u/16963863?v=3&s=200.jpg" class="logo" alt="Front-End Brasil">
-                    <h3 class="lead-title">Portando discussões feitas em grupos (Facebook, Google Groups, Slack, Disqus) para issues.</h3>
-                    <nav class="nav-main">
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a class="nav-link btn" onclick="go( `#sobre` ); return false" href="#sobre">Sobre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn" onclick="go( `#estrutura` ); return false" href="#estrutura">Estrutura</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn" onclick="go( `#sugestoes` ); return false" href="#sugestoes">Sugestões</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .intro {
+            background: #e2e2e2;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .intro .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .benefits, .details, .testimonials, .cta, .guarantee {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .benefit, .testimonial {
+            margin: 1rem 0;
+        }
+
+        .cta .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Produto de Marketing Digital</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introdução</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#details">Detalhes</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#cta">Comprar Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="intro" class="intro">
+        <div class="container">
+            <h2>Transforme Seu Negócio com Nosso Produto de Marketing Digital</h2>
+            <p>Descubra como nosso produto pode ajudar você a alcançar mais clientes e aumentar suas vendas.</p>
+            <a href="#cta" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Benefícios do Nosso Produto</h2>
+            <div class="benefit">
+                <h3>Automação Eficiente</h3>
+                <p>Automatize suas campanhas e economize tempo.</p>
             </div>
-        </header>
-        <main class="content">
+            <div class="benefit">
+                <h3>Resultados Comprovados</h3>
+                <p>Veja resultados reais com estratégias comprovadas.</p>
+            </div>
+            <div class="benefit">
+                <h3>Suporte Especializado</h3>
+                <p>Conte com nossa equipe de suporte sempre que precisar.</p>
+            </div>
+        </div>
+    </section>
 
-            <!-- Sobre -->
-            <section class="section" id="sobre">
-                <h2 class="title">Sobre</h2>
-                <p><strong>Olá, seja bem-vindo!</strong></p>
-                <p>Alguns posts em grupos de front-end em redes sociais geram bastante conteúdo bacana que poderia ser disponibilizado de forma mais fácil.</p>
-                <p>A busca do Facebook em grupos, por exemplo, tem vários problemas. Discussões épicas foram perdidas, e pessoas que ingressam agora nos grupos não tem mais acesso a esses posts.</p>
-                <p>A ideia desse repositório é portar ou iniciar essas discussões nas issues. Estando no Github, fica mais fácil procurar respostas a perguntas já respondidas por esses grupos.</p>
-                <p>O objetivo maior é unificar todas as discussões em um só local e o Github foi o escolhido para isso.</p>
-            </section>
+    <section id="details" class="details">
+        <div class="container">
+            <h2>Detalhes do Produto</h2>
+            <p>Nosso produto inclui:</p>
+            <ul>
+                <li>Guias passo a passo</li>
+                <li>Templates prontos para uso</li>
+                <li>Webinars e treinamentos exclusivos</li>
+                <li>Suporte técnico 24/7</li>
+            </ul>
+        </div>
+    </section>
 
-            <!-- Estrutura -->
-            <section class="section" id="estrutura">
-                <h2 class="title">Estrutura</h2>
-                <nav class="nav-structure">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://frontendbr.com.br/eventos" target="_blank">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/forum" target="_blank">Fórum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/me-contrata" target="_blank">Me Contrata</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/open-source" target="_blank">Open Source</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/poste-mais" target="_blank">Poste Mais</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/sugestoes" target="_blank">Sugestões</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://github.com/frontendbr/vagas" target="_blank">Vagas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="https://survey.frontendbr.com.br" target="_blank">Survey</a>
-                        </li>
-                    </ul>
-                </nav>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>O que Nossos Clientes Dizem</h2>
+            <div class="testimonial">
+                <p>"Este produto transformou minha estratégia de marketing. Os resultados foram impressionantes!" - João Silva</p>
+            </div>
+            <div class="testimonial">
+                <p>"Excelente! A automação facilitou muito o meu trabalho e aumentou minha produtividade." - Maria Oliveira</p>
+            </div>
+        </div>
+    </section>
 
-            </section>
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Pronto para Transformar Seu Negócio?</h2>
+            <p>Adquira nosso produto agora e comece a ver resultados!</p>
+            <a href="#" class="btn">Comprar Agora</a>
+        </div>
+    </section>
 
-            <!-- Sugestões -->
-            <section class="section" id="sugestoes">
+    <section id="guarantee" class="guarantee">
+        <div class="container">
+            <h2>Garantia de Satisfação</h2>
+            <p>Estamos tão confiantes na qualidade do nosso produto que oferecemos uma garantia de satisfação de 30 dias. Se você não estiver satisfeito, devolvemos o seu dinheiro.</p>
+        </div>
+    </section>
 
-                <a href="https://github.com/frontendbr/sugestoes/issues" class="box">Clique aqui para enviar uma sugestão!</a>
-
-            </section>
-
-        </main>
-
-        <footer class="footer">
-            <p>Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script>. Made with coffee and love.</p>
-        </footer>
-
-    </body>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Seu Nome ou Empresa. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Início</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
 </html>
